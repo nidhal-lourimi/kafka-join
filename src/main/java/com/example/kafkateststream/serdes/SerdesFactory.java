@@ -24,5 +24,6 @@ public class SerdesFactory {
 	public static <T> Serde<T> serdFrom(Class<T> pojoClass) {
 		return Serdes.serdeFrom(new GenericSerializer<T>(pojoClass), new GenericDeserializer<T>(pojoClass));
 	}
-
+/*	ObjectMapper mapper = new ObjectMapper();
+	Serde<CustomerOrder> CustOrdSerde = new JsonSerde<>(CustomerOrder.class, mapper);*/
 }

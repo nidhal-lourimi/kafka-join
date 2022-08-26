@@ -13,11 +13,8 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerde;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-@Getter
-@Setter
-@JsonSerialize
-@JsonDeserialize
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+/*@JsonDeserialize
+@JsonSerialize*/
 public class CustomerPurchase {
 
     public CustomerPurchase() {
@@ -41,6 +38,55 @@ public class CustomerPurchase {
     private Long purchaseId;
     private String itemName;
     private Integer itemsNumber;
+
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Long getPurchaseId() {
+        return purchaseId;
+    }
+
+    public void setPurchaseId(Long purchaseId) {
+        this.purchaseId = purchaseId;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public Integer getItemsNumber() {
+        return itemsNumber;
+    }
+
+    public void setItemsNumber(Integer itemsNumber) {
+        this.itemsNumber = itemsNumber;
+    }
 
     @Override
     public String toString() {
